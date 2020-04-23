@@ -1,0 +1,82 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="@string/about_app_pref">
+
+        <Preference
+            android:summary="@string/app_version"
+            android:title="@string/title_version" />
+
+        <Preference
+            android:summary="@string/summary_about"
+            android:title="@string/about_developer" />
+
+        <Preference
+            android:summary="@string/summary_visit_website"
+            android:title="@string/title_visit_developer_website">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_website" />
+        </Preference>
+        <!--<Preference
+            android:key="@string/key_send_feedback"
+            android:summary="@string/summary_support"
+            android:title="@string/title_send_feedback" />
+        <Preference
+            android:summary="@string/summary_rate"
+            android:title="@string/title_rate">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_rate" />
+        </Preference>
+
+        <Preference
+            android:summary="@string/summary_more_apps"
+            android:title="@string/title_more_apps">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_more_apps" />
+        </Preference>-->
+    </PreferenceCategory>
+    <PreferenceCategory app:title="API">
+        <Preference
+            android:summary="@string/api_info_summary"
+            android:title="@string/api_info_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/api_provider_website" />
+        </Preference>
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="reply"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="reply"
+            app:title="@string/reply_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+
+    </PreferenceCategory>-->
+
+</PreferenceScreen>

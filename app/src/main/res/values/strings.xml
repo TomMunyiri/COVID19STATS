@@ -1,0 +1,360 @@
+<resources>
+    <string name="app_name">COVID-19 STATS</string>
+    <string name="tab_text_world">WORLD STATS</string>
+    <string name="tab_text_country">COUNTRY STATS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_general_fragment">Hello General fragment</string>
+    <string name="hello_country_fragment">Hello Country fragment</string>
+    <string name="tv_general_data">OVERVIEW</string>
+    <string name="tv_total_cases_title">Total cases</string>
+    <string name="tv_total_cases_figure">1,234,243</string>
+    <string name="tv_total_deaths_title">Deaths</string>
+    <string name="tv_total_deaths_figure">59,545</string>
+    <string name="tv_total_recovery_title">Recovered cases</string>
+    <string name="tv_total_recovery_figure">3,655</string>
+    <string name="tv_active_data">ACTIVE CASES</string>
+    <string name="tv_total_active_title">Total active cases</string>
+    <string name="tv_total_active_figure">567,566</string>
+    <string name="tv_critical_active_title">Critical active cases</string>
+    <string name="tv_critical_active_figure">36,566</string>
+    <string name="tv_mild_active_title">Mild active cases</string>
+    <string name="tv_mild_active_figure">356,887</string>
+    <string name="tv_closed_cases">CLOSED CASES</string>
+    <string name="tv_closed_cases_title">Total closed cases</string>
+    <string name="tv_closed_cases_figure">343,775</string>
+    <string name="tv_deaths_closed_title">Death closed cases</string>
+    <string name="tv_deaths_closed_figure">33,533</string>
+    <string name="tv_recovery_closed_title">Recovered closed cases</string>
+    <string name="tv_recovery_closed_figure">345,787</string>
+    <string name="tv_last_updated">Last updated: Loading....</string>
+    <string name="last_updated_text">Last updated: &#160;</string>
+    <string name="tv_world">World</string>
+    <string name="spinner_title">Select country</string>
+    <string name="country_active_cases">Active Cases</string>
+    <string name="country_new_deaths">New Deaths</string>
+    <string name="country_new_cases">New Cases</string>
+    <string name="country_serious_critical_cases">Serious Critical Cases</string>
+    <string name="no_data_at_the_moment">No Data at the Moment</string>
+    <string name="exit">Exit</string>
+    <string-array name="Countries">
+        <item>Kenya</item>
+        <item>World</item>
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Aruba</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bermuda</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>British Indian Ocean Territory</item>
+        <item>British Virgin Islands</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cape Verde</item>
+        <item>Cayman Islands</item>
+        <item>CAR</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Christmas Island</item>
+        <item>Cocos Islands</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo</item>
+        <item>Cook Islands</item>
+        <item>Costa Rica</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>East Timor</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Falkland Islands</item>
+        <item>Faroe Islands</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>French Polynesia</item>
+        <item>Gabon</item>
+        <item>Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Gibraltar</item>
+        <item>Greece</item>
+        <item>Greenland</item>
+        <item>Grenada</item>
+        <item>Guam</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Honduras</item>
+        <item>Hong Kong</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Isle of Man</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Ivory Coast</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jersey</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kiribati</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macao</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mayotte</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Montserrat</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>Netherlands Antilles</item>
+        <item>New Caledonia</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Niue</item>
+        <item>North Korea</item>
+        <item>Northern Mariana Islands</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Pitcairn</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Puerto Rico</item>
+        <item>Qatar</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>Saint Barthelemy</item>
+        <item>Saint Helena</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Martin</item>
+        <item>Saint Pierre and Miquelon</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Georgia and the South Sandwich Islands</item>
+        <item>S.Korea</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Svalbard and Jan Mayen</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Togo</item>
+        <item>Tokelau</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Turks and Caicos Islands</item>
+        <item>Tuvalu</item>
+        <item>U.S. Virgin Islands</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>UAE</item>
+        <item>UK</item>
+        <item>USA</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Vatican</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Wallis and Futuna</item>
+        <item>Western Sahara</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <string name="title_activity_about_covid19">About Covid-19</string>
+    <string name="tab_text_symptoms">SYMPTOMS</string>
+    <string name="tab_text_prevention">PREVENTION</string>
+    <string name="tab_text_treatment">TREATMENT</string>
+    <string name="title_activity_about_app">About app</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="about_app_pref">About App</string>
+    <string name="pref_about_title">About Wallpix HD™</string>
+    <string name="pref_about_summary">Wallpix HD™ is a free app that provides you with plenty of awesome wallpapers to choose from in order to customize your devices. It is easy to use and designed well to bring you the perfect experience.</string>
+    <string name="about_developer">Developed by</string>
+    <string name="title_visit_developer_website">Developer\'s Website</string>
+    <string name="summary_visit_website">Feel free to Visit my website</string>
+    <string name="summary_about">Tom Munyiri</string>
+    <string name="app_version" translatable="false">1.03</string>
+    <string name="summary_support">Got any queries? We are happy to help! Got any suggestions? Send us to help improve the app</string>
+    <string name="title_send_feedback">Send Feedback</string>
+    <string name="url_website" translatable="false">http://morphostudios.net/</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="url_privacy" translatable="false">https://mydailyandroid.blogspot.com/p/wallpix-hd-terms-conditions.html</string>
+    <string name="title_terms">Terms of Use</string>
+    <string name="url_terms" translatable="false">https://mydailyandroid.blogspot.com/p/wallpix-hd-terms-conditions_28.html</string>
+    <string name="title_version">App Version</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="key_send_feedback" translatable="false">key_send_feedback</string>
+    <string name="title_rate">Rate and Review</string>
+    <string name="summary_rate">Enjoying Covid-19 Stats App? Give us a five star, review and share. Be part of improving the experience</string>
+    <string name="url_rate" translatable="false">https://play.google.com/store/apps/details?id=com.morphostudios.hdwallpapers.wallpixhd</string>
+    <string name="title_more_apps">More Apps</string>
+    <string name="summary_more_apps">Get more apps that we have built. Visit our Google Play Store Developer Page</string>
+    <string name="url_more_apps" translatable="false">https://play.google.com/store/apps/dev?id=8065116079305926994</string>
+    <string name="api_info_summary">COVID19 Stats</string>
+    <string name="api_info_title">API Provided by</string>
+    <string name="api_provider_website">https://corona-virus-stats.herokuapp.com/api/v1/docs/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="symptoms">According to the WHO, the most common symptoms of Covid-19 are:\n\u2022
+        Fever\n\u2022
+        Tiredness and a dry cough.\n\n
+        Some patients may also have:\n\u2022
+        A runny nose\n\u2022
+        A sore throat\n\u2022
+        A nasal congestion and aches and pains or diarrhoea.\n\n
+        Some people may:\n\u2022
+        Loose their sense of taste and/or smell. \n\n
+        About 80% of people who get Covid-19\n\u2022
+        Experience a mild case – about as serious as a regular cold – and recover without needing any special treatment.\n\n
+In the UK, the National Health Service (NHS) has identified the specific symptoms to look for as experiencing either:\n\u2022
+A high temperature – you feel hot to touch on your chest or back.\n\u2022
+A new continuous cough – this means you have started coughing repeatedly.</string>
+    <string name="prevention">There is currently no vaccine to prevent coronavirus disease (COVID-19).
+    You can protect yourself and help prevent spreading the virus to others if you:\n\n
+&#8226;Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub\n\n
+&#8226;Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze\n\n
+&#8226;Avoid close contact (1 meter or 3 feet) with people who are unwell\n\n
+&#8226;Stay home and self-isolate from others in the household if you feel unwell\n\n
+&#8226;Do not touch your eyes, nose, or mouth if your hands are not clean
+    </string>
+    <string name="treatment">There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to help them breathe.\n\n
+        <b>Self care</b>\n
+If you have mild symptoms, stay at home until you have recovered. You can relieve your symptoms if you:\n\u2022
+Rest and sleep\n\u2022
+Keep warm\n\u2022
+Drink plenty of liquids\n\u2022
+Use a room humidifier or take a hot shower to help ease a sore throat and cough\n\n
+
+        <b>Medical treatments</b>\n
+        If you develop a fever, cough, and have difficulty breathing:\n\u2022
+        Promptly seek medical care.\n\u2022
+        Call in advance and tell your health provider of any recent travel or recent contact with travelers.
+    </string>
+</resources>

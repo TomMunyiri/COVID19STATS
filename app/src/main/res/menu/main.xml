@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_symptoms"
+        android:contentDescription="Exit"
+        android:orderInCategory="100"
+        android:title="SYMPTOMS" />
+    <item
+        android:id="@+id/action_prevention"
+        android:contentDescription="Exit"
+        android:orderInCategory="200"
+        android:title="PREVENTION" />
+    <item
+        android:id="@+id/action_treatment"
+        android:contentDescription="Exit"
+        android:orderInCategory="300"
+        android:title="TREATMENT" />
+</menu>

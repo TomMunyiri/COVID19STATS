@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/llCountry">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/tv_general_data"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlTotalCases"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvTotalCasesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_cases_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOrange" />
+
+                <TextView
+                    android:id="@+id/tvTotalCasesFigure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTotalCasesTitle"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_cases_figure"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <!--<View
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="0.3sp"/>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvDeathsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_deaths_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorRed" />
+
+                <TextView
+                    android:id="@+id/tvDeathsFigure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDeathsTitle"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_deaths_figure"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorRed"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvRecoveryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_recovery_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorGreen" />
+
+                <TextView
+                    android:id="@+id/tvRecoveryFigure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvRecoveryTitle"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_recovery_figure"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="NEW &amp; ACTIVE CASES"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvActiveCasesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/country_active_cases"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOrange" />
+
+                <TextView
+                    android:id="@+id/tvActiveCasesFigure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvActiveCasesTitle"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_cases_figure"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <!--<View
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="0.3sp"/>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvNewDeathsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/country_new_deaths"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorRed" />
+
+                <TextView
+                    android:id="@+id/tvNewDeathsFigure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNewDeathsTitle"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_deaths_figure"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorRed"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvNewCasesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/country_new_cases"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorGreen" />
+
+                <TextView
+                    android:id="@+id/tvNewCasesFigure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNewCasesTitle"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_recovery_figure"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvCriticalCasesTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/country_serious_critical_cases"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOrange" />
+
+                <TextView
+                    android:id="@+id/tvCriticalCasesFigure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCriticalCasesTitle"
+                    android:gravity="center_horizontal"
+                    android:text="@string/tv_total_cases_figure"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

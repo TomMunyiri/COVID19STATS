@@ -1,0 +1,69 @@
+package com.tommunyiri.covid_19stats.ui.main;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+
+import com.tommunyiri.covid_19stats.R;
+
+/**
+ * A placeholder fragment containing a simple view.
+ */
+public class PlaceholderFragment extends Fragment {
+
+    private static final String ARG_SECTION_NUMBER = "section_number";
+
+    private PageViewModel pageViewModel;
+
+    public static PlaceholderFragment newInstance(int index) {
+        PlaceholderFragment fragment = new PlaceholderFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt(ARG_SECTION_NUMBER, index);
+        fragment.setArguments(bundle);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        pageViewModel = ViewModelProviders.of(this).get(PageViewModel.class);
+        int index = 1;
+        if (getArguments() != null) {
+            index = getArguments().getInt(ARG_SECTION_NUMBER);
+        }
+        pageViewModel.setIndex(index);
+    }
+
+    @Override
+    public View onCreateView(
+            @NonNull LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        /*View root = inflater.inflate(R.layout.fragment_main, container, false);
+        final TextView textView = root.findViewById(R.id.section_label);
+        pageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                textView.setText(s);
+            }
+        });
+        return root;*/
+        if(getArguments().getInt(ARG_SECTION_NUMBER)==0) {
+            View rootView = inflater.inflate(R.layout.fragment_general_stats, container, false);
+            return rootView;
+        }
+        else{
+            View rootView = inflater.inflate(R.layout.fragment_country_stats, container, false);
+                /*TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+                textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));*/
+            return rootView;
+        }
+    }
+}
