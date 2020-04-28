@@ -2,8 +2,12 @@ package com.tommunyiri.covid_19stats;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -24,6 +28,7 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.tommunyiri.covid_19stats.ui.aboutcovid19.AboutCovid19Activity;
 import com.tommunyiri.covid_19stats.ui.main.SectionsPagerAdapter;
@@ -70,6 +75,51 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         fab.setVisibility(View.INVISIBLE);
+
+    }
+
+    private BroadcastReceiver networkStateReceiver=new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo activeNetworkInfo = manager.getActiveNetworkInfo();
+            showNoInternetSnackBar(activeNetworkInfo);
+        }
+    };
+
+    public void showNoInternetSnackBar(NetworkInfo activeNetworkInfo){
+        /*final View viewPos = findViewById(R.id.myCoordinatorLayout);
+        Snackbar snackbar = Snackbar
+                .make(viewPos, "No internet connection !", Snackbar.LENGTH_INDEFINITE)
+                .setAction("DISMISS", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    }
+                });
+        // Changing message text color
+        snackbar.setActionTextColor(Color.WHITE);
+        // Changing action button text color
+        View sbView = snackbar.getView();
+        TextView textView = sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setTextColor(Color.YELLOW);
+        snackbar.show();*/
+        if(activeNetworkInfo.isConnected()){
+            Toast.makeText(this,"Internet connected",Toast.LENGTH_LONG).show();
+        }else if(!activeNetworkInfo.isConnected()){
+            Toast.makeText(this,"No internet",Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        registerReceiver(networkStateReceiver, new IntentFilter(android.net.ConnectivityManager.CONNECTIVITY_ACTION));
+    }
+
+    @Override
+    public void onPause() {
+        unregisterReceiver(networkStateReceiver);
+        super.onPause();
     }
 
     public void setAnimation() {
