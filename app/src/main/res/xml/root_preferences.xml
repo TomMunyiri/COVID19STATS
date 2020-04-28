@@ -11,6 +11,7 @@
             android:title="@string/about_developer" />
 
         <Preference
+            android:icon="@drawable/ic_launch_black_24dp"
             android:summary="@string/summary_visit_website"
             android:title="@string/title_visit_developer_website">
             <intent
@@ -39,6 +40,7 @@
     </PreferenceCategory>
     <PreferenceCategory app:title="API">
         <Preference
+            android:icon="@drawable/ic_launch_black_24dp"
             android:summary="@string/api_info_summary"
             android:title="@string/api_info_title">
             <intent
