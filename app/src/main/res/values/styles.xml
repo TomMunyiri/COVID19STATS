@@ -27,9 +27,13 @@
         <item name="android:background">@color/colorWhite</item>
     </style>
 
-    <style name="TextAppearance.FontPath" parent="android:TextAppearance">
-        <!-- Custom Attr-->
-        <item name="fontPath">assets/Exo2-Medium.otf</item>
+    <!--default app font-->
+    <style name="Exo2MediumFontStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/exomedium</item>
+    </style>
+
+    <style name="tab_text" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/exomedium</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

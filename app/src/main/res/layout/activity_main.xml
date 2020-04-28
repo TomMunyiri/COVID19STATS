@@ -48,8 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
-            android:textAppearance="@style/TextAppearance.FontPath"
-            app:tabTextAppearance="@style/TextAppearance.FontPath" />
+            app:tabTextAppearance="@style/tab_text"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
