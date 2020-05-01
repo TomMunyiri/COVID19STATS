@@ -110,12 +110,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         // Changing message text color
-        snackbar_no_internet.setActionTextColor(Color.WHITE);
+        snackbar_no_internet.setActionTextColor(Color.YELLOW);
         // Changing action button text color
         View sbView = snackbar_no_internet.getView();
         sbView.setBackgroundColor(getResources().getColor(R.color.colorRed));
         TextView textView = sbView.findViewById(com.google.android.material.R.id.snackbar_text);
-        textView.setTextColor(Color.LTGRAY);
+        textView.setTextColor(Color.WHITE);
         snackbar_no_internet.show();
     }
 
