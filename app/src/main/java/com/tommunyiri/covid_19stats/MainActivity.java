@@ -6,16 +6,20 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 
+import com.androidstudy.networkmanager.Monitor;
+import com.androidstudy.networkmanager.Tovuti;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,6 +32,7 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tommunyiri.covid_19stats.ui.aboutcovid19.AboutCovid19Activity;
@@ -75,50 +80,66 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         fab.setVisibility(View.INVISIBLE);
+        Tovuti.from(this).monitor(new Monitor.ConnectivityListener(){
+            @Override
+            public void onConnectivityChanged(int connectionType, boolean isConnected, boolean isFast){
+                // TODO: Handle the connection...
+                if(isNetworkAvailable()){
+                    showInternetSnackBar();
+                }else{
+                showNoInternetSnackBar();
+            }}
+        });
+
 
     }
 
-    private BroadcastReceiver networkStateReceiver=new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo activeNetworkInfo = manager.getActiveNetworkInfo();
-            showNoInternetSnackBar(activeNetworkInfo);
-        }
-    };
+    public boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
-    public void showNoInternetSnackBar(NetworkInfo activeNetworkInfo){
-        /*final View viewPos = findViewById(R.id.myCoordinatorLayout);
-        Snackbar snackbar = Snackbar
-                .make(viewPos, "No internet connection !", Snackbar.LENGTH_INDEFINITE)
+    public void showNoInternetSnackBar(){
+        Snackbar snackbar_no_internet = Snackbar
+                .make(findViewById(android.R.id.content), "You are offline! Check your internet", Snackbar.LENGTH_INDEFINITE)
                 .setAction("DISMISS", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                     }
                 });
         // Changing message text color
-        snackbar.setActionTextColor(Color.WHITE);
+        snackbar_no_internet.setActionTextColor(Color.WHITE);
         // Changing action button text color
-        View sbView = snackbar.getView();
+        View sbView = snackbar_no_internet.getView();
+        sbView.setBackgroundColor(getResources().getColor(R.color.colorRed));
         TextView textView = sbView.findViewById(com.google.android.material.R.id.snackbar_text);
-        textView.setTextColor(Color.YELLOW);
-        snackbar.show();*/
-        if(activeNetworkInfo.isConnected()){
-            Toast.makeText(this,"Internet connected",Toast.LENGTH_LONG).show();
-        }else if(!activeNetworkInfo.isConnected()){
-            Toast.makeText(this,"No internet",Toast.LENGTH_LONG).show();
-        }
+        textView.setTextColor(Color.LTGRAY);
+        snackbar_no_internet.show();
+    }
+
+    public void showInternetSnackBar(){
+        Snackbar snackbar_no_internet = Snackbar
+                .make(findViewById(android.R.id.content), "You are back online! Please Refresh", Snackbar.LENGTH_LONG)
+                .setAction("DISMISS", null);
+        // Changing message text color
+        snackbar_no_internet.setActionTextColor(Color.WHITE);
+        // Changing action button text color
+        View sbView = snackbar_no_internet.getView();
+        sbView.setBackgroundColor(getResources().getColor(R.color.colorGreen));
+        TextView textView = sbView.findViewById(com.google.android.material.R.id.snackbar_text);
+        textView.setTextColor(Color.WHITE);
+        snackbar_no_internet.show();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        registerReceiver(networkStateReceiver, new IntentFilter(android.net.ConnectivityManager.CONNECTIVITY_ACTION));
     }
 
     @Override
     public void onPause() {
-        unregisterReceiver(networkStateReceiver);
         super.onPause();
     }
 
